@@ -1,0 +1,12 @@
+rootProject.name = 'SpringBootProj'
+include 'Thymeleaf'
+include 'cookie'
+include 'Cookie'
+findProject(':Cookie')?.name = 'cookie'
+include 'Cartdemo'
+findProject(':Cartdemo')?.name = 'cartdemo'
+include 'FliterPj'
+include 'FilterPj2'
+include 'AutoLogin'
+include 'RESTFulAPi'
+

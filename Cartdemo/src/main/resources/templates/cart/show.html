@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>购物车</h3>
+<table>
+    <thead>
+    <td>商品名</td>
+    <td>单价</td>
+    <td>数量</td>
+    <td>小计</td>
+    </thead>
+    <tbody th:each="cart:${carts}">
+    <tr>
+        <td th:text="${cart.key.name}"></td>
+        <td th:text="${cart.key.price}"></td>
+        <td th:text="${cart.value}"></td>
+        <td th:text="${cart.key.price*cart.value}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>商品列表</h4>
+<table>
+    <thead>
+    <td>id</td>
+    <td>商品名称</td>
+    <td>价格</td>
+    <td>操作</td>
+    </thead>
+    <tbody th:each="p:${products}">
+    <tr>
+        <td th:text="${p.id}"></td>
+        <td th:text="${p.name}"></td>
+        <td th:text="${p.price}"></td>
+        <td><a th:href="@{/product/add(id=${p.id})}">添加到购物车</a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
